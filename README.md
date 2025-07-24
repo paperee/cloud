@@ -1,9 +1,9 @@
 # 服务器选购页｜DMBB Team
-来自 [@筱/桎梏/朽木自雕](https://vvaz.cn/) - DMBB Team 的商业委托）
+来自 [@筱/桎梏/朽木自雕](https://vvaz.cn/) - *DMBB Team* 的商业委托）
 
 ## 注意事项
-- 作者为 [纸片君ee/PAPEREE](https://paperee.guru/) - DMBB Team
-- 作者及 DMBB Team 持有此仓库的所有权益
+- 作者为 [纸片君ee/PAPEREE](https://paperee.guru/) - *DMBB Team*
+- 作者与其所在团队 *DMBB Team* 持有此仓库所有权益
 - 在非商业前提下允许任何人自由地复制、保存此仓库代码
 - 禁止以任何形式二改、二传、二次发布，禁止以任何形式商用
 - 以上未提到的权限默认禁止（~~被打~~
@@ -22,3 +22,27 @@
 
 以及，这是所有前端仓库中首个脱离JQ，使用原生JS编写的仓库——可喜可贺（  
 顺便感谢 [@kevinZzzzzzz](https://github.com/kevinZzzzzzz) 推荐了稀土掘金平台（）
+
+## 更新日志
+©2025 DMBB Team (*Do More And Be Better*)
+
+### *2025/06/?? v1.0 BY PAPEREE*
+- 完成了初版（~~此后搁置了半个多月~~
+
+### *2025/07/19 v2.0 BY PAPEREE*
+- 修复了部分窗口的显示*BUG*
+- 优化了小设备上的侧边栏
+- 优化了文件目录结构
+- 添加了自动切换暗色模式
+
+### *2025/07/20 v2.5 BY PAPEREE*
+- 修复了部分窗口的显示*BUG*
+- 优化了CSS代码结构
+- 优化了自适应实现逻辑（*JS->CSS*）
+- 添加了炫酷的动画效果
+- 修改了servers.js案例
+
+### *2025/07/21 v2.8 BY PAPEREE*
+- 修复了部分窗口在小设备上的溢出*BUG*
+- 优化了部分动画效果
+- 添加了页尾copyright声明
