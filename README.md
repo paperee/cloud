@@ -1,8 +1,8 @@
-# 服务器选购页｜DMBB Team
+# 服务器选购页｜*DMBB Team*
 来自 [@筱/桎梏/朽木自雕](https://vvaz.cn/) - *DMBB Team* 的商业委托）
 
 ## 注意事项
-- 作者为 [纸片君ee/PAPEREE](https://paperee.guru/) - *DMBB Team*
+- 作者为 [@纸片君ee/PAPEREE](https://paperee.guru/) - *DMBB Team*
 - 作者与其所在团队 *DMBB Team* 持有此仓库所有权益
 - 在非商业前提下允许任何人自由地复制、保存此仓库代码
 - 禁止以任何形式二改、二传、二次发布，禁止以任何形式商用
