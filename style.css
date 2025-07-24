@@ -1,0 +1,444 @@
+:root {
+    --dark-white-1:#121212;
+    --dark-white-2:#1e1e1e;
+    --dark-white-3:#252527;
+    --dark-blue-1:#3f97f6;
+    --dark-blue-2:#5799ff;
+    --dark-blue-3:#303742;
+    --dark-blue-4:#292e35;
+    --dark-red-1:#cc5858;
+    --dark-green-1:#3db770;
+    --dark-grey-1:#4a5568;
+    --dark-grey-2:#8594a9;
+    --dark-black-1:#c5c9d2;
+    --white-1:#eff1f8;
+    --white-2:#fbfcfd;
+    --white-3:#fefeff;
+    --white-4:#fff;
+    --blue-1:#4a86e8;
+    --blue-2:#3a76d8;
+    --blue-3:#f6fbff;
+    --blue-4:#e5ecfa;
+    --red-1:#ff6b6b;
+    --green-1:#48bb78;
+    --grey-1:#ebedf1;
+    --grey-2:#858096;
+    --black-1:#2f3a4b;
+}
+@media (prefers-color-scheme:dark) {
+    :root {
+        --white-1:var(--dark-white-1);
+        --white-2:var(--dark-white-2);
+        --white-3:var(--dark-white-3);
+        --white-4:var(--dark-white-1);
+        --blue-1:var(--dark-blue-1);
+        --blue-2:var(--dark-blue-2);
+        --blue-3:var(--dark-blue-3);
+        --blue-4:var(--dark-blue-4);
+        --red-1:var(--dark-red-1);
+        --green-1:var(--dark-green-1);
+        --grey-1:var(--dark-grey-1);
+        --grey-2:var(--dark-grey-2);
+        --black-1:var(--dark-black-1);
+        --highlight-1:var(--dark-blue-1);
+    }
+}
+* {
+    margin:0;
+    padding:0;
+    border:none;
+    box-sizing:border-box;
+    outline:none;
+    font-family:"Segoe UI",system-ui,sans-serif;
+    user-select:none; /* 防止按钮点击多次后文本自动选中 */
+}
+html {
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    background:var(--white-1);
+}
+body {
+    position:relative;
+    padding:8px;
+}
+a {text-decoration:none;}
+a,p,h1,h2,div {color:var(--black-1)}
+p,li,input {font-size:15px;}
+p,h1,h2,h3,li {cursor:default;}
+.fas:not(#themes>i) {
+    display:inline-flex;
+    margin-right:8px;
+}
+#copyright {
+    margin:5px 0 10px;
+    text-align:center;
+    font-size:14.6px;
+    letter-spacing:1.5px;
+    color:var(--dark-grey-1);
+    text-shadow:2px 2px 6px rgba(78,91,166,0.3);
+    animation:rotate-in 0.4s cubic-bezier(0.175,0.885,0.320,1.275) both 1.2s;
+    &::first-letter {color:var(--blue-1);}
+    span {color:var(--blue-2);}
+}
+.main-box {
+    background:var(--white-2);
+    margin:8px;
+    animation:fade-in 0.6s cubic-bezier(0.680,-0.550,0.265,1.550) both 1s;
+    &:not(#main-uwu,#search-box) {padding:20px;}
+}
+.main-box,#flow-box,#window,input,.btn,.product {border-radius:16px;}
+#air {
+    position:sticky;
+    height:0;
+    width:100%;
+    top:50px;
+    z-index:150;
+}
+#flow-box {
+    display:none;
+    background:var(--white-3);
+    padding:25px;
+    margin:auto;
+    width:480px;
+    box-shadow:0 20px 100px rgba(67,85,144,0.3);
+    border:1px solid var(--highlight-1);
+    animation:rotate-in 0.4s cubic-bezier(0.175,0.885,0.320,1.275) both;
+    &>p>i {
+        margin-left:10px;
+        color:var(--green-1);
+    }
+    h3 {
+        font-size:24px;
+        font-weight:700;
+        color:var(--blue-2);
+    }
+    #close {
+        cursor:pointer;
+        position:absolute;
+        top:20px;
+        right:25px;
+        font-size:25px;
+        .fas {transition:1s transform;}
+        &:hover .fas {transform:rotate(360deg);}
+    }
+    #window {
+        background:var(--blue-3);
+        margin:20px 0 17px;
+        padding:20px;
+        font-size:14.5px;
+        line-height:25px;
+    }
+    #price {
+        margin:19px 0 21px;
+        font-size:32px;
+        font-weight:800;
+        color:var(--blue-1);
+        &+p:empty::before {content:"详情请在购买界面查看";}
+    }
+}
+#header {
+    display:flex;
+    align-items:center;
+    * {display:inline;}
+    #btns {
+        display:flex;
+        margin-left:auto;
+        padding:0 10px;
+    }
+}
+#title {
+    animation:flip-in 0.5s cubic-bezier(0.390,0.575,0.565,1.000) both 1s;
+    * {font-size:23px;}
+    .fas {
+        margin-left:13px;
+        color:var(--blue-1);
+    }
+}
+#btns2 {
+    margin:25px 8px 3px;
+}
+#btns2,#user {
+    display:flex;
+    gap:15px;
+}
+#themes {
+    cursor:pointer;
+    display:none;
+    font-size:24px;
+    margin-left:30px;
+    &:hover {color:var(--blue-2);}
+}
+#main-container {
+    display:flex;
+    flex-flow:row;
+    min-height:80vh;
+}
+#search-box {
+    display:flex;
+    align-items:center;
+    position:absolute;
+    background:transparent;
+    top:118px;
+    right:30px;
+    z-index:100;
+    animation:slide-in 0.8s cubic-bezier(0.175,0.885,0.120,1.175) both 1s;
+    * {cursor:pointer;}
+    .fas {
+        position:absolute;
+        left:18px;
+        pointer-events:none;
+        color:var(--blue-2);
+    }
+    input {
+        background:var(--white-3);
+        padding:10px 20px 10px 45px;
+        width:300px;
+        color:var(--grey-2);
+        box-shadow:0 2px 15px rgba(34,35,46,0.05);
+        transition:0.5s ease-in-out all;
+        &:focus {box-shadow:0 4px 17px rgba(34,44,152,0.1);}
+    }
+}
+#main-uwu {
+    flex:1;
+    hr {
+        border-top:2px solid var(--grey-1);
+        margin:16px 25px 9px;
+    }
+}
+#head {
+    margin:23px 25px 0;
+    h2 {
+        font-size:22px;
+        overflow:hidden;
+        font-weight:bold;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+}
+.products {
+    display:none;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    margin:0 10px 15px;
+    animation:slide-in 0.4s cubic-bezier(0.390,0.575,0.565,1.000) both;
+    &:empty::before {
+        margin:10px 15px;
+        font-style:italic;
+        color:var(--black-1);
+        content:"你似乎来到了一片没有知识的荒漠...";
+    }
+    &:has(.product:only-child) {grid-template-columns:minmax(0,650px);}
+    &:target,&.show {display:grid;}
+    &.hide {display:none;}
+}
+#nav {
+    flex:0 0 210px;
+    * {font-size:13.6px;}
+    p {
+        cursor:pointer;
+        font-size:14.4px;
+        color:var(--grey-2);
+        &>i {transition:0.5s ease-in-out all;}
+        &:not(:first-child) {margin-top:25px;}
+        &+.btn {margin-top:10px;}
+        .rotate {transform:rotate(540deg);}
+    }
+    .btn {
+        display:block;
+        padding-left:15px;
+        animation:flip-in 0.9s cubic-bezier(0.175,0.885,0.320,1.275) both;
+        transition:0.2s ease-in-out all;
+        &+.btn {margin-top:2px;}
+    }
+    .active {
+        background:var(--blue-4);
+        color:var(--blue-2);
+        font-style:italic;
+    }
+    .transparent {background:transparent;}
+    .toggle {display:none;}
+}
+.btn {
+    padding:10px;
+    &:hover {
+        * {color:var(--blue-2);}
+        background:var(--blue-4);
+    }
+}
+.btn,.btn2,.btn3 {
+    cursor:pointer;
+    font-size:13.4px;
+}
+.btn2 {
+    border:1px solid var(--blue-1);
+    padding:8px 20px;
+    color:var(--blue-2);
+}
+.btn2,.btn3 {
+    border-radius:14px;
+    letter-spacing:0.2px;
+    font-weight:bold;
+}
+.btn3 {
+    background:var(--blue-1);
+    padding:9px 20px;
+    width:fit-content;
+    color:var(--white-4);
+    box-shadow:0 4px 12px rgba(74,134,232,0.3);
+}
+.product {
+    position:relative;
+    overflow:hidden;
+    background:var(--white-3);
+    margin:10px;
+    padding:25px;
+    border:1px solid transparent;
+    box-shadow:0 10px 30px rgba(34,35,46,0.05);
+    transition:all 0.3s ease-in-out;
+    #search-reason & {animation:fade-in 0.4s cubic-bezier(0.175,0.885,0.320,1.275) both;}
+    &:hover {
+        box-shadow:0 14px 32px rgba(34,44,152,0.1);
+        transform:translateY(-7px);
+        transition:all 0.2s ease-in-out;
+        border:1px solid var(--blue-3);
+    }
+    .btn3 {
+        transition:0.2s ease-in-out all;
+        &:hover {
+            transform:translateX(5px);
+            transition:0.1s ease-in-out all;
+            .fas::before {content:"\f0fe";}
+        }
+    }
+    .title {
+        padding-bottom:25px;
+        font-size:19px;
+        .fas {
+            font-size:18px;
+            color:var(--blue-1);
+        }
+    }
+    .price {
+        cursor:default;
+        display:flex;
+        align-items:center;
+        margin:19px 0 14px;
+        span {
+            margin:0 6px 4px;
+            font-size:28px;
+            font-weight:800;
+            color:var(--blue-2);
+        }
+    }
+    .label {
+        text-align:center;
+        position:absolute;
+        background:var(--red-1);
+        padding:5px;
+        width:160px;
+        top:20px;
+        right:-50px;
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:600;
+        color:var(--white-4);
+        transform:rotate(45deg);
+        &.green {background:var(--green-1);}
+        &.blue {background:var(--blue-1);}
+    }
+    .feature {
+        display:block;
+        padding-bottom:16px;
+        .fas {color:var(--green-1);}
+        span:empty::before {content:"详情请在购买界面查看";}
+    }
+}
+@media (max-width:1000px) {
+    body {padding:6px;}
+    #header {padding:16px;}
+    #head {margin:20px 20px 0;}
+    #main-uwu hr {margin:16px 20px 9px;}
+    #themes {margin-left:15px;}
+    #nav {flex:0 0 190px;}
+    .main-box {margin:6px;}
+    .products:empty::before {margin:10px;}
+    .product {
+        margin:5px;
+        &:hover {transform:none;}
+        .feature {padding-bottom:14px;}
+    }
+}
+@media (max-width:1000px) and (min-width:700px) {
+    #search-box {
+        top:110px;
+        right:24px;
+        input {
+            padding-left:30px;
+            width:0;
+            &:focus {
+                padding-left:45px;
+                width:300px;
+            }
+        }
+    }
+}
+@media (max-width:700px) {
+    #user {gap:10px;}
+    #main-container {flex-flow:column;}
+    #search-box {
+        position:unset;
+        input {
+            background:var(--white-2);
+            width:-moz-available;
+            width:-webkit-fill-available;
+        }
+    }
+    #nav {
+        flex:0;
+        .btn {display:none;}
+        .toggle {display:block;}
+        p {
+            &>i::before {content:"\f106";}
+            &:not(:first-child) {margin-top:15px;}
+            &+.btn {margin-top:8px;}
+        }
+    }
+}
+@media (max-width:500px) {
+    body {padding:4px;}
+    #flow-box {width:94vw;}
+    .btn2,.btn3 {
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .products {grid-template-columns:1fr;}
+}
+@media (max-width:470px) {
+    #header {display:block;}
+    #btns {margin-top:15px;}
+}
+@keyframes rotate-in {
+    0% {opacity:0;}
+    10% {transform:scale(0.8) rotate(10deg);}
+    80% {transform:scale(1) rotate(0);}
+    100% {opacity:1;}
+}
+@keyframes slide-in {
+    0% {opacity:0;}
+    10% {transform:scaleY(0.6) translateX(1000px);}
+    80% {transform:scaleY(1) translateX(0);}
+    100% {opacity:1;}
+}
+@keyframes flip-in {
+    0% {opacity:0;}
+    10% {transform:rotateX(80deg);}
+    80% {transform:rotateX(0);}
+    100% {opacity:1;}
+}
+@keyframes fade-in {
+    0% {opacity:0;}
+    10% {scale:0.9;}
+    90% {scale:1;}
+    100% {opacity:1;}
+}

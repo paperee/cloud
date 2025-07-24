@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="Keywords" content=""> <!-- content中填入搜索关键词 -->
+        <meta name="Description" content=""> <!-- content中填入网页描述 -->
+        <link rel="stylesheet" type="text/css" href="resources/all.min.css"> <!-- 图标库 -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>服务器选购</title>
+    </head>
+    <body>
+        <div id="air">
+            <div id="flow-box">
+                <div id="close"><i class="fas fa-times"></i></div>
+                <h3><i class="fas fa-check-square"></i><span>确认订单<span></h3>
+                <div id="window"></div>
+                <p><i class="fas fa-info-circle"></i><span>你可以在付款界面自定义服务器配置</span></p>
+                <div id="btns2">
+                    <div class="btn3"><i class="fas fa-check"></i><span>确认购买</span></div>
+                    <div class="btn2"><i class="fas fa-times"></i><span>取消</span></div>
+                </div>
+            </div>
+        </div>
+        <div id="header" class="main-box">
+            <div id="title"><i class="fas fa-cloud"></i><h1>DMBB Cloud</h1></div>
+            <div id="btns">
+                <div id="user">
+                    <div onclick="go('https://...')" class="btn2">登陆</div> <!-- 记得改登陆链接 -->
+                    <div onclick="go('https://...')" class="btn3">免费注册</div> <!-- 记得改注册链接 -->
+                </div>
+                <div id="themes"><i class="fas fa-adjust"></i></div>
+            </div>
+        </div>
+        <div id="main-container">
+            <div id="nav" class="main-box"></div>
+            <div id="search-box" class="main-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="搜索服务器名称...">
+            </div>
+            <div id="main-uwu" class="main-box">
+                <div id="head"><h2></h2></div><hr>
+                <div id="search-reason" class="products"></div>
+            </div>
+        </div>
+        <p id="copyright">©2025 <span>DMBB</span> Team. <i>All Rights Reserved.</i></p>
+        <script src="servers.js"></script> <!-- 服务器数据 -->
+        <script src="index.js"></script>
+    </body>
+</html>
